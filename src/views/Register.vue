@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     registerUser() {
-      fetch("http://localhost:4000/register", {
+      fetch("https://dlonra-academy.herokuapp.com/register", {
         method: "POST",
         body: JSON.stringify({
           name: this.name,

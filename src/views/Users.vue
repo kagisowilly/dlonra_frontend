@@ -1,8 +1,8 @@
 <template>
-   
+   <div class="myTable">
     <table v-if="showUsers" class="table mt-5">
       <thead>
-        <tr class="text-black">
+        <tr class="text-black text-start">
           <th>#</th>
           <th scope="col">Name</th>
           <th scope="col">Surname</th>
@@ -10,33 +10,32 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="text-Black text-start" v-for="user of users" :key="user.id">
+        <tr class="text-white text-start" v-for="user of users" :key="user.id">
           <th scope="row">{{ user.id}}</th>
-          <th scope="row">
+          <td scope="row">
             <span class="">
               {{ user.name }}
             </span>
-          </th>
+          </td>
           <td class="POINT" style="width: 100px">
             {{user.surname}}
           </td>
           <td class="POINT" style="width: 100px">
-            {{user.email}}
-          </td>
-          <td>
-
+           {{user.email}}
           </td>
         </tr>
       </tbody>
-    </table>
-       <!-- <button @click ="toggleShowUsers">
+    </table>    
+   </div>
+
+       <button @click ="toggleShowUsers">
     <span v-if="showUsers">
-        Hide books
+        Hide Users
     </span>
     <span v-else>
-        Show books
+        Show Users
     </span>
-       </button>  -->
+       </button> 
 </template>
 
 <script>
@@ -49,7 +48,7 @@ return{
 },
 // FETCHING USERS
 mounted(){
-     fetch("http://localhost:4000/users")
+     fetch("https://dlonra-academy.herokuapp.com/users")
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
@@ -68,11 +67,24 @@ methods:{
 <style scoped>
 table{
 width: 60%;
+
 }
-tr{
-  margin-top: 200px !important;
+.myTable{
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
 }
-button{
-  margin-top:200px !important;
+@media all and (max-width: 800px) {
+  td{
+    font-size: 13px !important;
+  }
+  button{
+  margin-bottom:50px !important;
+  background-color: #ffc801;
+  border-radius: 20px;
+
+}  
 }
+
+
 </style> 

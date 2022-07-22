@@ -1,7 +1,6 @@
 <template>
- 
+  <Navbar />
 <section>
- <Navbar />
   <router-view/>  
 </section>
 
@@ -24,6 +23,9 @@ components:{
   text-align: center;
   color: #2c3e50;
 }
+section{
+  width: 100% !important;
+}
 
    body{
     min-height: 100vh;
@@ -33,8 +35,8 @@ components:{
     background-size: cover !important;
     background-image: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
       ),
       url(https://i.postimg.cc/HktzX627/books-g3ba765adb-1280.jpg);
     background-position: 70%;

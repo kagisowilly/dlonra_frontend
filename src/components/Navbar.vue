@@ -14,7 +14,7 @@ export default {
 <style scoped>
   nav {
     padding: 30px;
-    background-color: #949398FF;
+    background-color: rgb(99, 99, 99);
     position: fixed;
     top: 0;
     width: 100%;
