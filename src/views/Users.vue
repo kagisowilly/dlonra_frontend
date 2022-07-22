@@ -74,14 +74,16 @@ width: 60%;
   align-items: center;
   min-height: 85vh;
 }
+button{
+    background-color: #ffc801;
+  border-radius: 20px;
+}
 @media all and (max-width: 800px) {
   td{
     font-size: 13px !important;
   }
   button{
   margin-bottom:50px !important;
-  background-color: #ffc801;
-  border-radius: 20px;
 
 }  
 }
